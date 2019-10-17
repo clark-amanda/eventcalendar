@@ -1,168 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v3.8.5">
-    <title>Pricing example · Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/pricing/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
 
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<body>
 
-	  <!--Angular-->
-	  <script src="scripts/jquery_3_4_1.js"></script>
-	  <script src="scripts/ng/angular.js"></script>
-	  <script src="scripts/ng/angular-route.js"></script>
+  <!-- Start your project here-->
+  <div style="height: 100vh">
+    <div class="flex-center flex-column">
 
-   
-    <!-- Custom styles for this template -->
-    <link href="packages/core/dist/main.css" rel="stylesheet" />
-	<link href="packages/daygrid/dist/main.css" rel="stylesheet" />
-	<link href="packages/timegrid/dist/main.css" rel="stylesheet" />
-	<link href="packages/list/dist/main.css" rel="stylesheet" />
-	<script src="packages/core/dist/main.js"></script>
-	<script src="packages/interaction/dist/main.js"></script>
-	<script src="packages/daygrid/dist/main.js"></script>
-	<script src="packages/timegrid/dist/main.js"></script>
-	<script src="packages/list/dist/main.js"></script>
-<script>
+      <h1 class="text-hide animated fadeIn mb-4"
+        style="background-image: url('https://mdbootstrap.com/img/logo/mdb-transparent-250px.png'); width: 250px; height: 90px;">
+        MDBootstrap</h1>
+      <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
 
-  document.addEventListener("DOMContentLoaded", function() {
-    var calendarEl = document.getElementById("calendar");
-
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      plugins: [ "interaction", "dayGrid", "timeGrid", "list" ],
-      height: "parent",
-      header: {
-        left: "prev,next today",
-        center: "title",
-        right: "dayGridMonth,timeGridWeek,timeGridDay,listWeek"
-      },
-      defaultView: "dayGridMonth",
-      defaultDate: "2019-08-12",
-      navLinks: true, // can click day/week names to navigate views
-      editable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: [
-        {
-          title: "All Day Event",
-          start: "2019-08-01",
-        },
-        {
-          title: "Long Event",
-          start: "2019-08-07",
-          end: "2019-08-10"
-        },
-        {
-          groupId: 999,
-          title: "Repeating Event",
-          start: "2019-08-09T16:00:00"
-        },
-        {
-          groupId: 999,
-          title: "Repeating Event",
-          start: "2019-08-16T16:00:00"
-        },
-        {
-          title: "Conference",
-          start: "2019-08-11",
-          end: "2019-08-13"
-        },
-        {
-          title: "Meeting",
-          start: "2019-08-12T10:30:00",
-          end: "2019-08-12T12:30:00"
-        },
-        {
-          title: "Lunch",
-          start: "2019-08-12T12:00:00"
-        },
-        {
-          title: "Meeting",
-          start: "2019-08-12T14:30:00"
-        },
-        {
-          title: "Happy Hour",
-          start: "2019-08-12T17:30:00"
-        },
-        {
-          title: "Dinner",
-          start: "2019-08-12T20:00:00"
-        },
-        {
-          title: "Birthday Party",
-          start: "2019-08-13T07:00:00"
-        },
-        {
-          title: "Click for Google",
-          url: "http://google.com/",
-          start: "2019-08-28"
-        }
-      ]
-    });
-
-    calendar.render();
-  });
-
-</script>
-	  <style>
-
-  html, body {
-    overflow: hidden; /* don"t do scrollbars */
-    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-    font-size: 14px;
-  }
-
-  #calendar-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .fc-header-toolbar {
-    /*
-    the calendar will be butting up against the edges,
-    but let"s scoot in the header"s buttons
-    */
-    padding-top: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-
-</style>
-  </head>
-  <body>
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-  <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark" href="#">Features</a>
-    <a class="p-2 text-dark" href="#">Enterprise</a>
-    <a class="p-2 text-dark" href="#">Support</a>
-    <a class="p-2 text-dark" href="#">Pricing</a>
-  </nav>
-  <a class="btn btn-outline-primary" href="#">Sign up</a>
-</div>
-
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">Pricing</h1>
-  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
-</div>
-
-<div class="container">
-  <div id="calendar-container">
-    <div id="calendar"></div>
-  </div>
+      <p class="animated fadeIn text-muted">MDB Team</p>
     </div>
-  
+  </div>
+  <!-- Start your project here-->
 
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
-   
-  </footer>
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
+
 </html>
