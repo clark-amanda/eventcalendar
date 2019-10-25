@@ -8,9 +8,10 @@ calendar {
   -moz-box-sizing: border-box;
   background: white;
   width: 90%;
+  height: 90%;
   border: solid 1px #CCC;
   margin-left: auto;
-  margin-right:auto;
+  margin-right: auto;
 }
 
 calendar > div.header {
@@ -44,7 +45,7 @@ calendar > div.header > i.fa-angle-right {
   text-align: right;
   margin-left: -40px;
 }
-calendar > div.header > span {
+calendar > div.header > div {
   float: left;
   width: 100%;
   font-weight: bold;
@@ -65,7 +66,7 @@ calendar > div.week {
 calendar > div.week:first-child {
   border-top: none;
 }
-calendar > div.week > span.day {
+calendar > div.week > div.day {
   float: left;
   width: 14.28571429%;
   box-sizing: border-box;
@@ -81,20 +82,32 @@ calendar > div.week > span.day {
   cursor: pointer;
   color: black;
 }
-calendar > div.week > span.day:first-child {
+calendar > div.week > div.day:first-child {
   border-left: none;
 }
-calendar > div.week > span.day.today {
+calendar > div.week > div.day.today {
   background: #E3F2FF;
 }
-calendar > div.week > span.day.different-month {
+calendar > div.week > div.day.different-month {
   color: #C0C0C0;
 }
-calendar > div.week > span.day.selected {
+calendar > div.week > div.day.selected {
   background: #2875C7;
   color: white;
 }
-calendar > div.week.names > span {
+calendar > div.week.names > div {
   color: #2875C7;
   font-weight: bold;
+}
+
+span.day-num {
+  float:left;
+  background: #efefef;
+  width: 20px;
+  height: 30px;
+  margin: 10px;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+  color: #000;
 }
